@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DropHandler" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>DropHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowHandler" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAQBAAAAAAAAAAAAAAEAIABA=</HashCode>
+      <FileName>WindowHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseHandler" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAABAAAAAAAAAAAACAAAAgAAAIAAAAAAAA=</HashCode>
+      <FileName>MouseHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyHandler" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>KeyHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Render" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Render.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Window" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QECQJAREAgAUDAgkAEBECBAIAQAAZAAFAYCQCCESAAA=</HashCode>
+      <FileName>Window.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_render" />
+      <Field Name="_in" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VertexArray" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAoIAAAAAAEBAAAAAAAAAAAAAAACAAAEAABAA=</HashCode>
+      <FileName>VertexArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VertexBuffer" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAQAAABAAEAAAQAAAAAAAAAAAAAIAFAA=</HashCode>
+      <FileName>VertexBuffer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeshDrawer" Collapsed="true">
+    <Position X="11.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAIAEAQAgAIAAAAAgAAiAAAACAA=</HashCode>
+      <FileName>MeshDrawer.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_mesh" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Mesh" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAgAAABAAEAAAAAAABABAAAAJAQAQwAAAAAAAA=</HashCode>
+      <FileName>Mesh.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Input" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEgggAAAgAAAAAAAA=</HashCode>
+      <FileName>Input.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="w" />
+      <Field Name="kh" />
+      <Field Name="dh" />
+      <Field Name="mh" />
+      <Field Name="wh" />
+    </ShowAsAssociation>
+  </Struct>
+  <Struct Name="vertex" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Mesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

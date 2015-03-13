@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\input">
+      <UniqueIdentifier>{beaf3ad9-e983-4032-b86f-4df2cf152990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\window">
+      <UniqueIdentifier>{84b484ef-6eaf-4712-aa14-b66240908c78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\test">
+      <UniqueIdentifier>{7d97cd9a-361c-4ed3-bdbc-a1305dd3f8b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ogl">
+      <UniqueIdentifier>{8c78b8ca-b217-4e22-a51c-f4cbe2604b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\ogl">
+      <UniqueIdentifier>{452a4b1e-7212-45e9-aeac-58bc53636f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\ogl\mesh">
+      <UniqueIdentifier>{3aae1cd8-9173-478e-b956-6da4239a2f2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ogl\mesh">
+      <UniqueIdentifier>{57e72a52-8f9c-4ed0-bf79-779c759e21ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\window">
+      <UniqueIdentifier>{4043792f-3cad-4a3e-8e97-f6b92355f1fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ogl\shader">
+      <UniqueIdentifier>{531c51c7-c5a4-4786-9dd8-1a4c949c13be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\ogl\shader">
+      <UniqueIdentifier>{86a44482-5d62-4354-b832-53c250cbdb9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ogl\vertex">
+      <UniqueIdentifier>{71be5f15-88fa-4bb3-9d00-231d9d57c1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\test">
+      <UniqueIdentifier>{0fab843d-15ab-4434-ab71-36c9c392e977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\ogl\vertex">
+      <UniqueIdentifier>{4c9dbe70-bc2e-4bb9-8e96-4bd71e69ff09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources\test</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Fichiers sources\window</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Fichiers sources\ogl\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshDrawer.cpp">
+      <Filter>Fichiers sources\ogl\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexArray.cpp">
+      <Filter>Fichiers sources\ogl\vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Fichiers sources\ogl\vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>Fichiers sources\ogl\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Fichiers sources\ogl\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="MyRender.cpp">
+      <Filter>Fichiers sources\test</Filter>
+    </ClCompile>
+    <ClCompile Include="GLRender.cpp">
+      <Filter>Fichiers sources\ogl</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshRender.cpp">
+      <Filter>Fichiers sources\ogl\mesh</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DropHandler.h">
+      <Filter>Fichiers d%27en-tête\input</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseHandler.h">
+      <Filter>Fichiers d%27en-tête\input</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyHandler.h">
+      <Filter>Fichiers d%27en-tête\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Fichiers d%27en-tête\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers.h">
+      <Filter>Fichiers d%27en-tête\input</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowHandler.h">
+      <Filter>Fichiers d%27en-tête\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Render.h">
+      <Filter>Fichiers d%27en-tête\window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Fichiers d%27en-tête\window</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshDrawer.h">
+      <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Fichiers d%27en-tête\ogl\vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexArray.h">
+      <Filter>Fichiers d%27en-tête\ogl\vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>Fichiers d%27en-tête\ogl\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Fichiers d%27en-tête\ogl\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="MyRender.h">
+      <Filter>Fichiers d%27en-tête\test</Filter>
+    </ClInclude>
+    <ClInclude Include="GLRender.h">
+      <Filter>Fichiers d%27en-tête\ogl</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshRender.h">
+      <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
