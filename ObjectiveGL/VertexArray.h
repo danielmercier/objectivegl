@@ -10,10 +10,10 @@ class VertexArray
 public:
 	VertexArray();
 	~VertexArray();
-	void attribBuffer(VertexBuffer &vb, GLint size, GLboolean normalized, GLsizei stride, const void* pointer);
-	void attribBuffer(VertexBuffer &vb, GLint size, GLboolean normalized);
-	void attribBuffer(VertexBuffer &vb, GLint size, GLsizei stride, const void* pointer);
-	void attribBuffer(VertexBuffer &vb, GLint size);
+	void attribBuffer(VertexBuffer &vb, GLint dimension, GLboolean normalized, GLsizei stride, const void* pointer);
+	void attribBuffer(VertexBuffer &vb, GLint dimension, GLboolean normalized);
+	void attribBuffer(VertexBuffer &vb, GLint dimension, GLsizei stride, const void* pointer);
+	void attribBuffer(VertexBuffer &vb, GLint dimension);
 
 	/*Add all the buffer*/
 	void bind();

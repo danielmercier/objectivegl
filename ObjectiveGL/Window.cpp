@@ -26,7 +26,7 @@ Window::Window(int width, int height, const std::string &name, bool fullscreen) 
 	/* Make the window's context current */
 	glfwMakeContextCurrent(_window);
 	initInputs();
-	_render = new Render();
+	_render = new Renderer();
 }
 
 Window::Window(const std::string &name){
@@ -60,7 +60,7 @@ Window::Window(const std::string &name){
 
 	initInputs();
 
-	_render = new Render();
+	_render = new Renderer();
 }
 
 
@@ -119,7 +119,7 @@ void Window::setTitle(const std::string &title){
 	glfwSetWindowTitle(_window, title.c_str());
 }
 
-void Window::setRender(Render *render){
+void Window::setRenderer(Renderer *render){
 	this->_render = render;
 }
 

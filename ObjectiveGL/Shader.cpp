@@ -6,7 +6,6 @@ Shader::Shader(GLenum shaderType)
 	_id = glCreateShader(shaderType);
 }
 
-
 Shader::~Shader()
 {
 	glDeleteShader(_id);

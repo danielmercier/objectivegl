@@ -81,11 +81,11 @@
     <ClCompile Include="MyRender.cpp">
       <Filter>Fichiers sources\test</Filter>
     </ClCompile>
-    <ClCompile Include="GLRender.cpp">
-      <Filter>Fichiers sources\ogl</Filter>
-    </ClCompile>
     <ClCompile Include="MeshRender.cpp">
       <Filter>Fichiers sources\ogl\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="GLRenderer.cpp">
+      <Filter>Fichiers sources\ogl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,16 +107,10 @@
     <ClInclude Include="WindowHandler.h">
       <Filter>Fichiers d%27en-tête\input</Filter>
     </ClInclude>
-    <ClInclude Include="Render.h">
-      <Filter>Fichiers d%27en-tête\window</Filter>
-    </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>Fichiers d%27en-tête\window</Filter>
     </ClInclude>
     <ClInclude Include="MeshDrawer.h">
-      <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh.h">
       <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
     </ClInclude>
     <ClInclude Include="VertexBuffer.h">
@@ -134,10 +128,16 @@
     <ClInclude Include="MyRender.h">
       <Filter>Fichiers d%27en-tête\test</Filter>
     </ClInclude>
-    <ClInclude Include="GLRender.h">
+    <ClInclude Include="MeshRender.h">
+      <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="GLRenderer.h">
       <Filter>Fichiers d%27en-tête\ogl</Filter>
     </ClInclude>
-    <ClInclude Include="MeshRender.h">
+    <ClInclude Include="Renderer.h">
+      <Filter>Fichiers d%27en-tête\window</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.hpp">
       <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
     </ClInclude>
   </ItemGroup>

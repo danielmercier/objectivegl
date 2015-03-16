@@ -1,41 +1,24 @@
-#include "Mesh.h"
+#include "Mesh.hpp"
 #include <iostream>
 
 /*Empty Constructor*/
-Mesh::Mesh(bool useIndices){
-	_useIndices = useIndices;
+Mesh::Mesh(){
+	_size = -1;
 }
 
-void Mesh::addData(float *data, int size, int nb, bool normalized){
-	Mesh::dataFVAO d;
-	d.data = data;
-	d.normalized = normalized;
-	d.size = size;
-	d.nb = nb;
-	_data.push_back(d);
+void Mesh::setVertices(std::vector<float> vertices){
+	VertexBuffer vbo(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
+	_vao.attribBuffer(vbo, 3);
+
+	if (_size == -1)
+		_size = vertices.size();
+}
+void Mesh::setTexCoords(std::vector<float> texCoords){
+	VertexBuffer vbo(GL_ARRAY_BUFFER, texCoords.size() * sizeof(float), texCoords.data(), GL_STATIC_DRAW);
+	_vao.attribBuffer(vbo, 2);
 }
 
-/*Setters*/
-void Mesh::setDrawMod(int drawMod){
-	_drawMod = drawMod;
-}
-void Mesh::setVertices(std::vector<vertex> vertices){
-	_vertices = vertices;
-}
 void Mesh::setIndices(std::vector<unsigned int> indices){
-	_indices = indices;
-}
-
-/*Getters*/
-int Mesh::getDrawMod(){
-	return _drawMod;
-}
-std::vector<Mesh::vertex> Mesh::getVertices(){
-	return _vertices;
-}
-bool Mesh::useIndices(){
-	return _useIndices;
-}
-std::vector<unsigned int> Mesh::getIndices(){
-	return _indices;
+	_ibo = new VertexBuffer(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+	_size = indices.size();
 }

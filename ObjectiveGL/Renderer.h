@@ -1,5 +1,5 @@
 #pragma once
-class Render
+class Renderer
 {
 public:
 	virtual void render(){}

@@ -1,30 +1,22 @@
 #include <GL\glew.h>
 
-#include "Mesh.h"
+#include "Mesh.hpp"
 #include "VertexArray.h"
 
 #pragma once
 class MeshDrawer
 {
 public:
-	MeshDrawer(Mesh *mesh);
+	MeshDrawer(Mesh *mesh, GLenum drawMod, bool useIndices = false);
 	~MeshDrawer();
 
 	virtual void draw();
 
-protected:
-	VertexArray _va;
-
 private:
 	Mesh *_mesh;
-	VertexBuffer *_ibo;
+	bool _useIndices;
+	GLenum _drawMod;
 
-	void addOtherMeshElements();
-
-	/*private methods*/
 	void drawWithIndices();
 	void drawWithoutIndices();
-
-	void initBase();
-	void addIndices();
 };

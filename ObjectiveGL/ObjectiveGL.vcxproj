@@ -70,7 +70,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GLRender.cpp" />
+    <ClCompile Include="GLRenderer.cpp" />
     <ClCompile Include="MeshRender.cpp" />
     <ClCompile Include="MyRender.cpp" />
     <ClCompile Include="Program.cpp" />
@@ -83,7 +83,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GLRender.h" />
+    <ClInclude Include="GLRenderer.h" />
     <ClInclude Include="MeshRender.h" />
     <ClInclude Include="MyRender.h" />
     <ClInclude Include="Program.h" />
@@ -93,8 +93,8 @@
     <ClInclude Include="DropHandler.h" />
     <ClInclude Include="Handlers.h" />
     <ClInclude Include="MeshDrawer.h" />
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Render.h" />
+    <ClInclude Include="Mesh.hpp" />
+    <ClInclude Include="Renderer.h" />
     <ClInclude Include="WindowHandler.h" />
     <ClInclude Include="MouseHandler.h" />
     <ClInclude Include="KeyHandler.h" />

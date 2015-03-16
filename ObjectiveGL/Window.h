@@ -4,7 +4,7 @@
 #include <GLFW\glfw3.h>
 
 #include "Input.h"
-#include "Render.h"
+#include "Renderer.h"
 
 #pragma once
 class Window
@@ -30,7 +30,7 @@ public:
 
 	void setTitle(const std::string &title);
 
-	void setRender(Render *render);
+	void setRenderer(Renderer *render);
 
 	/*Inputs functions*/
 	int getKeyState(int key);
@@ -53,7 +53,7 @@ public:
 
 private:
 	GLFWwindow *_window;
-	Render *_render;
+	Renderer *_render;
 	Input *_in;
 	/*Window width and height*/
 	int _h; 

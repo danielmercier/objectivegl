@@ -1,11 +1,11 @@
 #pragma once
-#include "GLRender.h"
+#include "GLRenderer.h"
 #include "Program.h"
-#include "Mesh.h"
+#include "Mesh.hpp"
 #include "MeshDrawer.h"
 
 class MyRender :
-	public GLRender
+	public GLRenderer
 {
 public:
 	MyRender(int width, int height);

@@ -1,7 +1,7 @@
-#include "GLRender.h"
+#include "GLRenderer.h"
 
 
-GLRender::GLRender()
+GLRenderer::GLRenderer()
 {
 	glewExperimental = GL_TRUE;
 	glewInit();
@@ -9,11 +9,11 @@ GLRender::GLRender()
 }
 
 
-GLRender::~GLRender()
+GLRenderer::~GLRenderer()
 {
 }
 
-void GLRender::render(){
+void GLRenderer::render(){
 	beforeRendering();
 	for each (MeshRender *m in _mesh)
 	{
@@ -22,7 +22,7 @@ void GLRender::render(){
 	afterRendering();
 }
 
-void GLRender::addMesh(MeshRender* m){
+void GLRenderer::addMesh(MeshRender* m){
 	if (m){
 		_mesh.push_back(m);
 	}
