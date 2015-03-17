@@ -42,6 +42,4 @@ private:
 	VertexBuffer *_ibo;
 
 	int _size;
-
-	bool _useIndices;
 };

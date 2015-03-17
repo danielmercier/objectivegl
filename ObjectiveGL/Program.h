@@ -49,5 +49,7 @@ private:
 	std::vector<triplet> _parameters;
 
 	int location(const std::string &);
+
+	static GLuint usedProgram;
 };
 

@@ -11,11 +11,17 @@ public:
 	MyRender(int width, int height);
 	~MyRender();
 	void beforeRendering();
+
 	glm::mat4 projection;
 	glm::mat4 view;
+	glm::mat4 model;
+
+	void render();
 
 private:
 	int _width;
 	int _height;
+	MeshDrawer *_md;
+	Program _p;
 };
 

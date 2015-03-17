@@ -17,6 +17,11 @@ void MeshDrawer::draw(){
 	}
 }
 
+void MeshDrawer::draw(Program &p){
+	p.setLinkedParameters();
+	draw();
+}
+
 void MeshDrawer::drawWithIndices(){
 	/*Bind the correct vao and the ibo*/
 	_mesh->getVertexArray().bind();

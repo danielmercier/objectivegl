@@ -52,6 +52,9 @@
     <Filter Include="Fichiers sources\ogl\vertex">
       <UniqueIdentifier>{4c9dbe70-bc2e-4bb9-8e96-4bd71e69ff09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\shader">
+      <UniqueIdentifier>{c32816e4-13a1-40cd-a9ea-3c04e9b6ae3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -134,5 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="FS.glsl">
+      <Filter>Fichiers sources\shader</Filter>
+    </None>
+    <None Include="VS.glsl">
+      <Filter>Fichiers sources\shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

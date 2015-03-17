@@ -2,6 +2,7 @@
 
 #include "Mesh.hpp"
 #include "VertexArray.h"
+#include "Program.h"
 
 #pragma once
 class MeshDrawer
@@ -11,6 +12,7 @@ public:
 	~MeshDrawer();
 
 	virtual void draw();
+	virtual void draw(Program &);
 
 private:
 	Mesh *_mesh;

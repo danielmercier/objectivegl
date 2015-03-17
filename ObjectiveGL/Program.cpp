@@ -1,6 +1,8 @@
 #include "Program.h"
 #include "Shader.h"
 
+GLuint Program::usedProgram = 0;
+
 Program::Program()
 {
 	_id = glCreateProgram();
@@ -30,7 +32,10 @@ void Program::detach(Shader &sh){
 }
 
 void Program::use(){
-	glUseProgram(_id);
+	if (usedProgram != _id){
+		glUseProgram(_id);
+		usedProgram = _id;
+	}
 }
 
 void Program::link(){
@@ -55,35 +60,44 @@ std::string Program::getLog(){
 }
 
 void Program::stopUsing(){
-	glUseProgram(0);
+	if (usedProgram != 0){
+		glUseProgram(0);
+		usedProgram = 0;
+	}
 }
 
 void Program::setParameter(const std::string & uniform, int value){
+	use();
 	int loc = location(uniform);
 	glUniform1i(loc, value);
 }
 
 void Program::setParameter(const std::string & uniform, float value){
+	use();
 	int loc = location(uniform);
 	glUniform1f(loc, value);
 }
 
 void Program::setParameter(const std::string & uniform, const glm::vec2 &value){
+	use();
 	int loc = location(uniform);
 	glUniform2fv(loc, 1, glm::value_ptr(value));
 }
 
 void Program::setParameter(const std::string & uniform, const glm::vec3 &value){
+	use();
 	int loc = location(uniform);
 	glUniform3fv(loc, 1, glm::value_ptr(value));
 }
 
 void Program::setParameter(const std::string & uniform, const glm::vec4 &value){
+	use();
 	int loc = location(uniform);
 	glUniform4fv(loc, 1, glm::value_ptr(value));
 }
 
 void Program::setParameter(const std::string & uniform, const glm::mat4 &value){
+	use();
 	int loc = location(uniform);
 	glUniformMatrix4fv(loc, 1, false, glm::value_ptr(value));
 }
@@ -136,6 +150,7 @@ void Program::linkParameter(const std::string &str, const glm::mat4 *v){
 
 	_parameters.push_back(t);
 }
+
 void Program::setLinkedParameters(){
 	for each (Program::triplet t in _parameters)
 	{
