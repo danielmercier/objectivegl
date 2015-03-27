@@ -4,22 +4,22 @@
 #include <gtc\quaternion.hpp>
 #include <gtc\matrix_transform.hpp>
 
-float vertices[] = { 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1,    // v0-v1-v2-v3 (front)
-					 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1,    // v0-v3-v4-v5 (right)
-					 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, 1, 1,    // v0-v5-v6-v1 (top)
-					-1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, 1,    // v1-v6-v7-v2 (left)
-					-1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1,    // v7-v4-v3-v2 (bottom)
-					 1, -1, -1, -1, -1, -1, -1, 1, -1, 1, 1, -1 };  // v4-v7-v6-v5 (back)
-
-float normals[] = { 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1,    // v0-v1-v2-v3 (front)
-					1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,    // v0-v3-v4-v5 (right)
-					0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0,    // v0-v5-v6-v1 (top)
-					-1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0,    // v1-v6-v7-v2 (left)
-					0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0,    // v7-v4-v3-v2 (bottom)
-					0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1 };  // v4-v7-v6-v5 (back)
-
 MyRender::MyRender(int width, int height) : _width(width), _height(height)
 {
+	float vertices[] = { 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1,    // v0-v1-v2-v3 (front)
+		1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, -1,    // v0-v3-v4-v5 (right)
+		1, 1, 1, 1, 1, -1, -1, 1, -1, -1, 1, 1,    // v0-v5-v6-v1 (top)
+		-1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, 1,    // v1-v6-v7-v2 (left)
+		-1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1,    // v7-v4-v3-v2 (bottom)
+		1, -1, -1, -1, -1, -1, -1, 1, -1, 1, 1, -1 };  // v4-v7-v6-v5 (back)
+
+	float normals[] = { 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1,    // v0-v1-v2-v3 (front)
+		1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,    // v0-v3-v4-v5 (right)
+		0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0,    // v0-v5-v6-v1 (top)
+		-1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0,    // v1-v6-v7-v2 (left)
+		0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0,    // v7-v4-v3-v2 (bottom)
+		0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1 };  // v4-v7-v6-v5 (back)
+	
 	glEnable(GL_DEPTH_TEST);
 
 	VertexShader vs("VS.glsl");
@@ -70,11 +70,11 @@ MyRender::MyRender(int width, int height) : _width(width), _height(height)
 	}
 
 	Mesh *m = new Mesh;
-	std::vector<float> v(vertices, vertices + _size * 3);
+	_v = new std::vector<float>(vertices, vertices + _size * 3);
 	std::vector<float> t(tex, tex + _size * 2);
 	std::vector<unsigned int> ind(indices, indices + _indexSize);
 
-	m->setVertices(v);
+	m->setDynamicalVertices(_v);
 	m->setTexCoords(t);
 	m->setIndices(ind);
 	m->addData(std::vector<float>(normals, normals + _size * 3), 3);

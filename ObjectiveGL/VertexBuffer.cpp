@@ -5,16 +5,14 @@ VertexBuffer::VertexBuffer(GLenum target, GLsizei size, GLenum usage)
 {
 	_target = target;
 	glGenBuffers(1, &_vbo);
-	bind();
-	glBufferData(target, size, NULL, usage);
+	setData(size, NULL, usage);
 }
 
 VertexBuffer::VertexBuffer(GLenum target, GLsizei size, const void *data, GLenum usage)
 {
 	_target = target;
 	glGenBuffers(1, &_vbo);
-	bind();
-	glBufferData(target, size, data, usage);
+	setData(size, data, usage);
 }
 
 const void VertexBuffer::bind(){
@@ -29,6 +27,11 @@ const int VertexBuffer::getIndex(){
 void VertexBuffer::subData(GLuint offset, GLsizei size, const GLvoid* data){
 	bind();
 	glBufferSubData(_target, offset, size, data);
+}
+
+void VertexBuffer::setData(GLsizei size, const GLvoid *data, GLenum usage){
+	bind();
+	glBufferData(_target, size, data, usage);
 }
 
 VertexBuffer::~VertexBuffer()

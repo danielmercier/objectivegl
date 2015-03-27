@@ -26,6 +26,9 @@ void MeshDrawer::drawWithIndices(){
 	/*Bind the correct vao and the ibo*/
 	_mesh->getVertexArray().bind();
 	_mesh->getIndices().bind();
+
+	_mesh->updateDynamicalData();
+
 	glDrawElements(_drawMod, _mesh->getSize() , GL_UNSIGNED_INT, 0);
 
 	/*Unbind the vao*/
@@ -34,6 +37,8 @@ void MeshDrawer::drawWithIndices(){
 void MeshDrawer::drawWithoutIndices(){
 	/*Bind the correct vao*/
 	_mesh->getVertexArray().bind();
+
+	_mesh->updateDynamicalData();
 
 	glDrawArrays(_drawMod, 0, _mesh->getSize());
 

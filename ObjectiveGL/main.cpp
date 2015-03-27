@@ -11,13 +11,15 @@
 #include "Program.h"
 #include "MyRender.h"
 #include "GLRenderer.h"
+#include "BezierRenderer.h"
 
 using namespace std;
 
 int main( void ){
 	Window w(640, 480, "Test");
-	MyRender render(640, 480);
+	BezierRenderer render;
 	
+	w.setMouseHandler(&render);
 	w.setRenderer(&render);
 
 	return w.exec();

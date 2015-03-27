@@ -22,3 +22,17 @@ void Mesh::setIndices(std::vector<unsigned int> indices){
 	_ibo = new VertexBuffer(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 	_size = indices.size();
 }
+
+void Mesh::updateDynamicalData(){
+	for each (Couple c in _dynamicalData)
+	{
+		c._vbo->setData(c._data->size() * sizeof(float), c._data->data(), GL_STATIC_DRAW);
+	}
+}
+
+void Mesh::setDynamicalVertices(std::vector<float> *vertices){
+	addDynamicalData(vertices, 3);
+
+	if (_size == -1)
+		_size = vertices->size();
+}

@@ -14,6 +14,7 @@ public:
 	const void unbind();
 	const int getIndex();
 	void subData(GLuint offset, GLsizei size, const GLvoid * data);
+	void setData(GLsizei size, const GLvoid *data, GLenum usage);
 
 private:
 	GLuint _vbo;

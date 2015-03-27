@@ -23,5 +23,6 @@ private:
 	int _height;
 	MeshDrawer *_md;
 	Program _p;
+	std::vector<float> *_v;
 };
 

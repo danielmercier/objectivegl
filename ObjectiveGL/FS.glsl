@@ -14,25 +14,6 @@ or inability to use this file or items derived from it.
 ******************************************************************************/
 #version 420
 
-in vec2 texCoordOut;
-in vec3 normal;
-in vec3 light;
-in vec3 vertex;
-
-layout (location = 0) out vec4 frag_colour;
-
-uniform vec3 eye;
-
 void main () {
-	vec3 n = normalize(normal);
-	vec3 l = normalize(light);
-	vec3 v = normalize(vertex);
-	vec3 e = normalize(eye);
-	l = normalize(l-v);
-	vec3 r = normalize(2 * dot(n,l) - l);
-	float diffuse = max(0.2, dot(n,l));
-	float specular = pow(max(0, dot(r,v)), 40);
-
-	frag_colour = vec4(1,0,0.0,1.0);
-	frag_colour.rgb *= (diffuse + specular);
+	frag_colour = vec4(1.0,0.0,0.0,1.0);
 };

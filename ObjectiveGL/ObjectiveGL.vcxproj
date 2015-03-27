@@ -44,11 +44,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\libraries\include\opencv;D:\libraries\include\glm;D:\libraries\include\glfw;D:\libraries\include\glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\include\opencv;D:\dev\include\glm\glm;D:\dev\include\glfw;D:\dev\include\glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\libraries\lib\opencv;D:\libraries\lib\glfw;D:\libraries\lib\glew;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\dev\lib\opencv;D:\dev\lib\glfw;D:\dev\lib\glew;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;opencv_core2410d.lib;opencv_highgui2410d.lib;opencv_imgproc2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -59,19 +59,18 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\libraries\include\opencv;D:\libraries\include\glm;D:\libraries\include\glfw;D:\libraries\include\glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\include\opencv;D:\dev\include\glm\glm;D:\dev\include\glfw;D:\dev\include\glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>D:\libraries\lib\opencv;D:\libraries\lib\glfw;D:\libraries\lib\glew;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\dev\lib\opencv;D:\dev\lib\glfw;D:\dev\lib\glew;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;opencv_core2410.lib;opencv_highgui2410.lib;opencv_imgproc2410.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GLRenderer.cpp" />
-    <ClCompile Include="MeshRender.cpp" />
+    <ClCompile Include="BezierRenderer.cpp" />
     <ClCompile Include="MyRender.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -83,8 +82,8 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BezierRenderer.h" />
     <ClInclude Include="GLRenderer.h" />
-    <ClInclude Include="MeshRender.h" />
     <ClInclude Include="MyRender.h" />
     <ClInclude Include="Program.h" />
     <ClInclude Include="Shader.h" />
@@ -103,6 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="FS.glsl" />
+    <None Include="VS.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

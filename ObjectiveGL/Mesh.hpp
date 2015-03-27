@@ -23,8 +23,17 @@ public:
 		_vao.attribBuffer(vbo, dimension, normalized);
 	}
 
+	void addDynamicalData(std::vector<float> *data, int dimension, bool normalized = false){
+		VertexBuffer *vbo = new VertexBuffer(GL_ARRAY_BUFFER, data->size() * sizeof(float), data->data(), GL_STATIC_DRAW);
+		_vao.attribBuffer(*vbo, dimension, normalized);
+		_dynamicalData.push_back(Couple(vbo, data));
+	}
+
+	void updateDynamicalData();
+	
 	/*Setters*/
 	void setVertices(std::vector<float> vertices);
+	void setDynamicalVertices(std::vector<float> *vertices);
 	void setTexCoords(std::vector<float> texCoords);
 	void setIndices(std::vector<unsigned int> indices);
 
@@ -35,11 +44,21 @@ public:
 	int getSize(){ return _size; }
 
 private:
-	friend class MeshDrawer;
-
+	class Couple{
+	public:
+		Couple(VertexBuffer *vbo, std::vector<float> *data){
+			_vbo = vbo;
+			_data = data;
+		}
+		VertexBuffer *_vbo;
+		std::vector<float> *_data;
+	};
+	
 	/*Store all the vertices of a mesh*/
 	VertexArray _vao;
 	VertexBuffer *_ibo;
+
+	std::vector<Couple> _dynamicalData;
 
 	int _size;
 };

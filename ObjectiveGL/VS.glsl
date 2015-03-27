@@ -15,24 +15,11 @@ or inability to use this file or items derived from it.
 #version 420
 
 layout(location = 0) in vec3 vp;
-layout(location = 1) in vec2 texCoord;
-layout(location = 2) in vec3 n;
-
-out vec2 texCoordOut;
-out vec3 normal;
-out vec3 light;
-out vec3 vertex;
 
 uniform mat4 view;
 uniform mat4 projection;
 uniform mat4 model;
 
 void main () {
-  texCoordOut = texCoord;
-
-  normal = vec3(view * vec4(n,0.0));
-  light = vec3(view * vec4(1000,100,10,1.0));
-  vertex = vec3(view * vec4 (vp, 1.0));
-
   gl_Position = projection * view * model * vec4 (vp, 1.0);
 };

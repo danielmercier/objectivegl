@@ -84,6 +84,9 @@
     <ClCompile Include="MyRender.cpp">
       <Filter>Fichiers sources\test</Filter>
     </ClCompile>
+    <ClCompile Include="BezierRenderer.cpp">
+      <Filter>Fichiers sources\test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DropHandler.h">
@@ -133,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="Mesh.hpp">
       <Filter>Fichiers d%27en-tête\ogl\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="BezierRenderer.h">
+      <Filter>Fichiers d%27en-tête\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
