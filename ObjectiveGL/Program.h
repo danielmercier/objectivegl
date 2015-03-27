@@ -11,7 +11,7 @@ class Program
 {
 public:
 	Program();
-	Program(const std::string vertex, const std::string &fragment);
+	Program(const std::string &vertex, const std::string &fragment);
 	~Program();
 	std::string getLog();
 	void use();
@@ -36,6 +36,10 @@ public:
 	void setLinkedParameters();
 
 	static void stopUsing();
+
+	int getId(){
+		return _id;
+	}
 private:
 	GLuint _id;
 	std::map < std::string, int > _map;

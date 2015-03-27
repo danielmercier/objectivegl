@@ -17,7 +17,7 @@ using namespace std;
 
 int main( void ){
 	Window w(640, 480, "Test");
-	BezierRenderer render;
+	BezierRenderer render(100);
 	
 	w.setMouseHandler(&render);
 	w.setRenderer(&render);

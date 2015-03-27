@@ -18,6 +18,7 @@ void MeshDrawer::draw(){
 }
 
 void MeshDrawer::draw(Program &p){
+	p.use();
 	p.setLinkedParameters();
 	draw();
 }
@@ -35,10 +36,10 @@ void MeshDrawer::drawWithIndices(){
 	_mesh->getVertexArray().unbind();
 }
 void MeshDrawer::drawWithoutIndices(){
+	_mesh->updateDynamicalData();
+
 	/*Bind the correct vao*/
 	_mesh->getVertexArray().bind();
-
-	_mesh->updateDynamicalData();
 
 	glDrawArrays(_drawMod, 0, _mesh->getSize());
 

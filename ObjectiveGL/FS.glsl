@@ -14,6 +14,10 @@ or inability to use this file or items derived from it.
 ******************************************************************************/
 #version 420
 
+in vec4 color;
+
+out vec4 frag_colour;
+
 void main () {
-	frag_colour = vec4(1.0,0.0,0.0,1.0);
+	frag_colour = color;
 };

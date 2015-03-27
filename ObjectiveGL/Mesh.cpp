@@ -11,7 +11,7 @@ void Mesh::setVertices(std::vector<float> vertices){
 	_vao.attribBuffer(vbo, 3);
 
 	if (_size == -1)
-		_size = vertices.size();
+		_size = vertices.size() / 3;
 }
 void Mesh::setTexCoords(std::vector<float> texCoords){
 	VertexBuffer vbo(GL_ARRAY_BUFFER, texCoords.size() * sizeof(float), texCoords.data(), GL_STATIC_DRAW);
@@ -34,5 +34,5 @@ void Mesh::setDynamicalVertices(std::vector<float> *vertices){
 	addDynamicalData(vertices, 3);
 
 	if (_size == -1)
-		_size = vertices->size();
+		_size = vertices->size() / 3;
 }

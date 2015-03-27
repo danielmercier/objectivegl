@@ -31,7 +31,9 @@ public:
 	}
 
 	float* calculate(float t){
-
+		if (t > 1 || t < 0){
+			printf("ERROR");
+		}
 		float *res = new float[2];
 		res[0] = 0;
 		res[1] = 0;
@@ -66,7 +68,7 @@ public:
 			i++;
 			coef *= (float)(points.size() - i) / (float)i;	   
 		}
-
+		
 		return res;
 	}
 };

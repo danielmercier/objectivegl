@@ -8,10 +8,14 @@ Program::Program()
 	_id = glCreateProgram();
 }
 
-Program::Program(const std::string vertex, const std::string &fragment){
-	Program();
+Program::Program(const std::string &vertex, const std::string &fragment){
+	_id = glCreateProgram();
 	VertexShader vert(vertex);
+	printf("%s", vert.getLog().data());
+
 	FragmentShader frag(fragment);
+	printf("%s", frag.getLog().data());
+
 	attach(vert);
 	attach(frag);
 	link();

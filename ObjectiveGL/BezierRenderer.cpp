@@ -4,7 +4,9 @@
 BezierRenderer::BezierRenderer(int precision)
 {
 	_line.resize(precision * 3);
+
 	_mesh.setDynamicalVertices(&_line);
+
 	_md = new MeshDrawer(&_mesh, GL_LINE_STRIP);
 	_p = new Program("VS.glsl", "FS.glsl");
 }
@@ -32,12 +34,15 @@ void BezierRenderer::mouseButtonPressed(Window *w, int button, int mods){
 
 void BezierRenderer::render(){
 	glClear(GL_COLOR_BUFFER_BIT);
-	for (int i = 0; i < (_line.size() / 3); i++){
-		float *p = b.calculate((float)i / ((float)_line.size() - 1));
+	int precision = _line.size() / 3;
+
+	for (int i = 0; i < precision; i++){
+		float *p = b.calculate((float)i / (float)(precision - 1));
+
 		_line[i * 3] = p[0];
 		_line[i * 3 + 1] = p[1];
 		_line[i * 3 + 2] = 0;
-	}	
+	}
 
 	_md->draw(*_p);
 }
